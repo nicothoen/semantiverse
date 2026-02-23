@@ -84,3 +84,11 @@ section {
   padding: 8px 10px;
   border-radius: 10px;
 }
+
+.profile-pic{
+  display: block;
+  margin: 0 auto;
+  width: 230px;
+  height: auto;
+  object-fit: contain;
+}
