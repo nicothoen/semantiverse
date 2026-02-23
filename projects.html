@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Nico 't Hoen</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .projects-card{
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .projects-card h2{
+      margin: 0 0 0.35rem;
+      line-height: 1.2;
+    }
+
+    .mini-note{
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 0 0.85rem;
+    }
+
+    .projects-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .project{
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 0.95rem;
+      background: var(--bg-soft);
+    }
+
+    .project h3{
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .project p{
+      margin: 0.35rem 0 0;
+      line-height: 1.35;
+      color: var(--text-dark);
+    }
+
+    .project-meta{
+      margin-top: 0.55rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-pic{
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px){
+      .projects-grid{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 850px){
+      .page-jump{
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nico 't Hoen</h1>
+    <p>Data & Analytics | Power BI | Governance | Business Intelligence</p>
+
+    <div class="page-jump">
+      <label for="pageSelect">Ga naar</label>
+      <select id="pageSelect">
+        <option value="index.html">Home</option>
+        <option value="projects.html" selected>Projects</option>
+        <option value="resume.html">Resume</option>
+        <option value="contact.html">Contact</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="projects-card">
+      <h2>Projects</h2>
+      <p class="mini-note">Hier komen je projecten te staan. Dit zijn dummy blokken die je straks kunt vervangen.</p>
+
+      <div class="projects-grid">
+
+        <article class="project">
+          <h3>Project 01 Titel</h3>
+          <p>Korte beschrijving van project 01. Wat was het doel en wat heb je opgeleverd.</p>
+          <div class="project-meta">Tech: Power BI, DAX, Fabric</div>
+        </article>
+
+        <article class="project">
+          <h3>Project 02 Titel</h3>
+          <p>Korte beschrijving van project 02. Wat was het doel en wat heb je opgeleverd.</p>
+          <div class="project-meta">Tech: SQL, Delta Lake, PySpark</div>
+        </article>
+
+        <article class="project">
+          <h3>Project 03 Titel</h3>
+          <p>Korte beschrijving van project 03. Wat was het doel en wat heb je opgeleverd.</p>
+          <div class="project-meta">Tech: Governance, Admin API, Monitoring</div>
+        </article>
+
+        <article class="project">
+          <h3>Project 04 Titel</h3>
+          <p>Korte beschrijving van project 04. Wat was het doel en wat heb je opgeleverd.</p>
+          <div class="project-meta">Tech: Data Modeling, SAP, Star Schema</div>
+        </article>
+
+       
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic" /></p>
+  </footer>
+
+  <script>
+    document.getElementById("pageSelect").addEventListener("change", function () {
+      const target = this.value
+      if (target) window.location.href = target
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Nico 't Hoen</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .resume-card{
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .resume-card h2{
+      margin: 0 0 0.35rem;
+      line-height: 1.2;
+    }
+
+    .mini-note{
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 0 0.85rem;
+    }
+
+    .resume-box{
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 0.95rem;
+      background: var(--bg-soft);
+    }
+
+    .resume-box p{
+      margin: 0.35rem 0 0;
+      line-height: 1.35;
+      color: var(--text-dark);
+    }
+
+    .resume-actions{
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .resume-actions a{
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .resume-actions a:hover{
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .profile-pic{
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 850px){
+      .page-jump{
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nico 't Hoen</h1>
+    <p>Data & Analytics | Power BI | Governance | Business Intelligence</p>
+
+    <div class="page-jump">
+      <label for="pageSelect">Ga naar</label>
+      <select id="pageSelect">
+        <option value="index.html">Home</option>
+        <option value="projects.html">Projects</option>
+        <option value="resume.html" selected>Resume</option>
+        <option value="contact.html">Contact</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="resume-card">
+      <h2>Resume</h2>
+      <p class="mini-note">Wil je mijn cv ontvangen, neem dan contact op.</p>
+
+      <div class="resume-box">
+        <p>
+          Mijn cv deel ik graag op aanvraag. Stuur me een bericht via de contactpagina en ik stuur je het document toe.
+        </p>
+
+        <div class="resume-actions">
+          <a href="contact.html">Naar Contact</a>
+          <a href="mailto:nico@thoen.eu">Mail direct</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic" /></p>
+  </footer>
+
+  <script>
+    document.getElementById("pageSelect").addEventListener("change", function () {
+      const target = this.value
+      if (target) window.location.href = target
+    })
+  </script>
+</body>
+</html>

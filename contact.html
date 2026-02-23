@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nico 't Hoen</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .contact-card{
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 0.9rem 1rem; /* compacter */
+    }
+
+    .contact-card h2{
+      margin: 0 0 0.35rem; /* minder ruimte */
+      line-height: 1.2;
+    }
+
+    .mini-note{
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 0 0.75rem; /* compacter */
+    }
+
+    .contact-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.45rem; /* minder gap */
+    }
+
+    .contact-list li{
+      line-height: 1.25; /* compacter */
+    }
+
+    .contact-list strong{
+      display: inline-block;
+      margin-bottom: 0.1rem; /* minder ruimte onder titel */
+    }
+
+    .contact-list a{
+      color: var(--link);
+      text-decoration: none;
+    }
+    .contact-list a:hover{
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .profile-pic{
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 850px){
+      .page-jump{
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nico 't Hoen</h1>
+    <p>Data & Analytics | Power BI | Governance | Business Intelligence</p>
+
+    <div class="page-jump">
+      <label for="pageSelect">Ga naar</label>
+      <select id="pageSelect">
+        <option value="index.html">Home</option>
+        <option value="projects.html">Projects</option>
+        <option value="resume.html">Resume</option>
+        <option value="contact.html" selected>Contact</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-card">
+      <h2>Contact</h2>
+      <p class="mini-note">Neem gerust contact op via mail, telefoon of LinkedIn.</p>
+
+      <ul class="contact-list">
+        <li><strong>Address</strong><br />Mariëndijk 50, Honselersdijk, Netherlands</li>
+        <li><strong>Email</strong><br /><a href="mailto:nico@thoen.eu">nico@thoen.eu</a></li>
+        <li><strong>Phone</strong><br /><a href="tel:+31628570030">+31 (0)6 28570030</a></li>
+        <li>
+          <strong>Kamer van Koophandel</strong><br />
+          <a href="https://www.kvk.nl/bestellen/#/27303376000013492411" target="_blank" rel="noopener noreferrer">
+            View KVK registration
+          </a>
+        </li>
+        <li>
+          <strong>LinkedIn</strong><br />
+          <a href="https://www.linkedin.com/in/nicothoen/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/nicothoen
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p><img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic" /></p>
+  </footer>
+
+  <script>
+    document.getElementById("pageSelect").addEventListener("change", function () {
+      const target = this.value
+      if (target) window.location.href = target
+    })
+  </script>
+</body>
+</html>

@@ -27,8 +27,15 @@ body {
 header {
   background-color: var(--primary-teal);
   color: var(--white);
-  padding: 2rem;
+
+  max-width: 900px;     /* maak kleiner voor nog smaller, bv 760px */
+  margin: 0 auto;       /* centreert het groene blok */
+  padding: 0.8rem 1.5rem; /* iets minder breedte, voorkomt mega zijkanten */
+
+  
   text-align: center;
+  position: relative;
+  border-radius: 12px;  /* optioneel: rond hoekjes */
 }
 
 header h1 {
@@ -38,7 +45,7 @@ header h1 {
 
 header p {
   font-size: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem; /*de ruimte onder je naam kleiner maken */
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -54,3 +61,26 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 12px;
   padding: 1.25rem
+}
+
+/* Dropdown navigatie, overal hetzelfde */
+.page-jump{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+.page-jump label{
+  font-size: 1rem;
+}
+
+.page-jump select{
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 10px;
+}

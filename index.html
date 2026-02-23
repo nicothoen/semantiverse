@@ -6,61 +6,76 @@
   <title>Portfolio Nico 't Hoen</title>
   <link rel="stylesheet" href="styles.css">
 
-<style>
-  .profile-pic {
-    display: block;        /* nodig om te kunnen centreren */
-    margin: 0 auto;        /* horizontaal centreren */
-    width: 40%;
-    height: 220px;
-    object-fit: cover;
-  }
-</style>
+  <style>
+    .profile-pic {
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      height: 220px;
+      object-fit: cover;
+    }
 
+  </style>
 </head>
-
 
 <body>
 
   <header>
     <h1>Nico 't Hoen</h1>
-    <p>Data & Analytics | Power BI | Governance | Business Intelligence </p> 
+    <p>Lead BI & Analytics | Power BI & Fabric | Semantic Models | Governance, Adoption & Self Service </p>
+
+    <!-- Treklijst om naar andere pagina te springen -->
+    <div class="page-jump">
+      <label for="pageSelect">Ga naar</label>
+      <select id="pageSelect">
+    <!--    <option value="" selected>Select a page</option> -->
+        <option value="index.html" selected>Home</option>
+        <option value="projects.html">Projects</option>
+        <option value="resume.html">Resume</option>
+        <option value="contact.html">Contact</option>
+      </select>
+    </div>
   </header>
 
   <main>
- 
     <section class="about">
       <h2>About</h2>
       <p>
- Certified Power BI and Microsoft Fabric consultant with deep expertise in Power BI, with a strong focus on dimensional modeling. I specialize in translating business questions into effective Business Intelligence solutions. As a team player, I work in a results driven way and support both colleagues and clients in achieving optimal performance.
-I combine analytical insight with pragmatism and creativity to deliver impactful, practical reports that lead directly to actionable insights. I build robust, future proof solutions with a clear focus on real world use and the end user, ensuring insights are actually used for steering and decision making.
-With experience as an information analyst, developer, and administrator across a wide range of data warehouse and BI environments, I can onboard quickly and switch effectively between strategic design and technical implementation. My commercial mindset helps me develop BI solutions that truly fit day to day operations and support organizations with concrete, usable insights.
-      </p>
+Gecertificeerd Power BI en Microsoft Fabric consultant met diepgaande expertise in Power BI en een sterke focus op dimensionaal modelleren. Ik vertaal business vragen naar effectieve BI oplossingen en combineer analytisch inzicht met pragmatisme en creativiteit om rapportages te leveren die direct leiden tot toepasbare inzichten.
+
+Ik bouw robuuste, toekomstvaste Power BI oplossingen op basis van bestaande datawarehouse structuren, met aandacht voor herbruikbaarheid, adoptie en gebruiksgemak. Mijn uitgangspunt is altijd de eindgebruiker, zodat inzichten ook echt worden gebruikt voor sturing en besluitvorming.
+
+Naast ontwikkeling richt ik mij op Power BI governance, zodat rapportages en datasets beheersbaar, veilig en schaalbaar blijven. Denk aan richtlijnen voor semantische modellen, lifecycle management, deployment pipelines, rechten en rollen, en standaarden voor selfservice BI.
+
+Met ervaring als informatieanalist, ontwikkelaar en beheerder in diverse datawarehouse en BI omgevingen kan ik snel inwerken en soepel schakelen tussen ontwerp en realisatie. Binnen scrumteams verbind ik business en techniek. Ik werk resultaatgericht en ondersteun collega’s en klanten om optimaal te presteren met oplossingen die aansluiten op de dagelijkse praktijk en concrete waarde toevoegen.      </p>
     </section>
 
     <section class="contact">
-  <h2>Contact me</h2>
-  <p>
-    Mariëndijk 50, Honselersdijk, Netherlands<br>
-    <a href="mailto:nico@thoen.eu">nico@thoen.eu</a><br>
-    <a href="tel:+31628570030">+31 (0)6 28570030</a><br>
-    <a href="https://www.kvk.nl/bestellen/#/27303376000013492411" target="_blank" rel="noopener noreferrer">
-      Kamer van Koophandel
-    </a><br>
-    <a href="https://www.linkedin.com/in/nicothoen/" target="_blank" rel="noopener noreferrer">
-      LinkedIn
-    </a>    
-  </p>
-</section>
-  
- 
-
-
-</main>
-
-
+      <h2>Contact me</h2>
+      <p>
+        Mariëndijk 50, Honselersdijk, Netherlands<br>
+        <a href="mailto:nico@thoen.eu">nico@thoen.eu</a><br>
+        <a href="tel:+31628570030">+31 (0)6 28570030</a><br>
+        <a href="https://www.kvk.nl/bestellen/#/27303376000013492411" target="_blank" rel="noopener noreferrer">
+          Kamer van Koophandel
+        </a><br>
+        <a href="https://www.linkedin.com/in/nicothoen/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p> <img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic"></p>
+    <p><img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic"></p>
   </footer>
+
+  <!-- JavaScript: spring naar gekozen pagina -->
+  <script>
+    document.getElementById("pageSelect").addEventListener("change", function () {
+      const target = this.value;
+      if (target) window.location.href = target;
+    });
+  </script>
 </body>
 </html>
