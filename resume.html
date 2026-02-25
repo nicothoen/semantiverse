@@ -68,18 +68,23 @@
 
 <body>
   <header>
-    <h1>Nico 't Hoen</h1>
-    <p>Data & Analytics | Power BI | Governance | Business Intelligence</p>
+ <div id="site-header"></div>
 
-    <div class="page-jump">
-      <label for="pageSelect">Ga naar</label>
-      <select id="pageSelect">
-        <option value="index.html">Home</option>
-        <option value="projects.html">Projects</option>
-        <option value="resume.html" selected>Resume</option>
-        <option value="contact.html">Contact</option>
-      </select>
-    </div>
+<script>
+  fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+
+      const pageSelect = document.getElementById("pageSelect");
+      const current = location.pathname.split("/").pop() || "index.html";
+      pageSelect.value = current;
+
+      pageSelect.addEventListener("change", function () {
+        if (this.value) window.location.href = this.value;
+      });
+    });
+</script>
   </header>
 
   <main>
