@@ -28,7 +28,7 @@ header {
   background-color: var(--primary-teal);
   color: var(--white);
 
-  max-width: 900px;     /* maak kleiner voor nog smaller, bv 760px */
+  max-width: 850px;     /* maak kleiner voor nog smaller, bv 760px */
   margin: 0 auto;       /* centreert het groene blok */
   padding: 0.8rem 1.5rem; /* iets minder breedte, voorkomt mega zijkanten */
 
