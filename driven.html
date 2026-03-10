@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data gedreven | Nico 't Hoen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/semantiverse_green.png" />
+
+  <style>
+    .resume-card{
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .page-header{
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-header h1{
+      margin: 0;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .page-header h2{
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .resume-box{
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 1.25rem;
+      background: var(--bg-soft);
+    }
+
+    .resume-box p{
+      margin: 0 0 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+    }
+
+    .resume-box p:last-child{
+      margin-bottom: 0;
+    }
+
+    .hero-image{
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 0 auto 1.5rem;
+      border-radius: 12px;
+    }
+
+    .hero-caption{
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .existing-copy p{
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 850px){
+      .page-jump{
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="site-header"></div>
+
+    <script>
+      fetch("header.html")
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById("site-header").innerHTML = html
+
+          const pageSelect = document.getElementById("pageSelect")
+          const current = location.pathname.split("/").pop() || "index.html"
+
+          if (pageSelect) {
+            pageSelect.value = current
+            pageSelect.addEventListener("change", function () {
+              if (this.value) window.location.href = this.value
+            })
+          }
+        })
+    </script>
+  </header>
+
+  <main>
+    <section class="resume-card">
+
+      <div class="page-header">
+        <h1>Power BI Platform & Analytics Lead</h1>
+        <h2>Data gedreven werken: de vis die vooruitkomt</h2>
+      </div>
+
+      <div class="resume-box">
+        <img src="images/vis thoendra.png" alt="Power BI Platform & Analytics Lead" class="hero-image" />
+
+        <p class="hero-caption">
+          Data gedreven werken is geen dashboard. Het is een levend geheel - van infrastructuur tot community. Als Power BI Platform & Analytics Lead geloof ik dat een organisatie alleen echt vooruit komt als techniek, standaarden, security en mensen elkaar versterken. Een gedreven vis zwemt altijd vooruit. 
+          
+        </p>
+
+        <div class="existing-copy">
+        <p>
+
+          Stel je een vis voor in open water. Niet een vis die spartelt of rondjes draait, maar een vis die soepel en doelgericht vooruitkomt. Elke beweging heeft een reden. Elk onderdeel doet zijn werk. En precies zo werkt een organisatie die echt data gedreven is.
+        </p>
+
+        <p>
+          Het begint bij de ruggengraat. Zonder een sterke infrastructuur komt er niets in beweging. Een goed ingerichte omgeving met betrouwbare databronnen zorgt dat data soepel door de organisatie stroomt, precies daar waar iemand erop wacht.
+        </p>
+
+        <p>
+          Maar kracht alleen is niet genoeg. Standaarden geven de organisatie haar vorm. Richtlijnen, gecertificeerde datasets en heldere afspraken zorgen ervoor dat niet iedereen zijn eigen kant op zwemt. Rapportages worden vergelijkbaar, informatie herkenbaar betrouwbaar. Er ontstaat een gedeelde taal, en die taal maakt samenwerking mogelijk.
+        </p>
+
+        <p>
+          Dan is er de huid, onzichtbaar misschien, maar onmisbaar. Data security beschermt wat kwetsbaar is. Met de juiste autorisaties en beveiligingslagen blijft gevoelige informatie bij de mensen die er verantwoordelijk voor zijn. Wie goed monitort, ziet op tijd waar iets schuurt.
+        </p>
+
+        <p>
+          Een gezonde vis heeft ook onderhoud nodig. Rapportages verouderen, datasets groeien scheef. Life cycle management houdt het datalandschap fris, overzichtelijk en bruikbaar, het onderhoud dat niemand glamoureus vindt, maar iedereen nodig heeft.
+        </p>
+
+        <p>
+          Wie weet wat er is, hoeft het niet opnieuw te maken. Een goede report catalog is het geheugen van de organisatie. Rapporten die logisch zijn beschreven en gecategoriseerd, worden hergebruikt en verder gebouwd. Dat bespaart tijd én vergroot vertrouwen.
+        </p>
+
+        <p>
+          En dan zijn er de vinnen. Zonder vinnen zwemt geen vis. Goede ondersteuning, training en een actieve community geven mensen de vrijheid om zelf met data aan de slag te gaan. Zo groeit niet alleen de kennis, maar ook het zelfvertrouwen.
+        </p>
+
+        <p>
+          Pas als al deze onderdelen in balans zijn, zwemt de organisatie echt vooruit. Data gedreven werken is geen project dat je afrond, het is een levend geheel. Een sterke vis, met een duidelijke richting en genoeg kracht om samen vooruit te komen.
+        </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><img src="images/semantiverse_green.png" alt="Semantiverse" class="profile-pic" /></p>
+  </footer>
+
+  <script>
+    const pageSelect = document.getElementById("pageSelect")
+    if (pageSelect) {
+      pageSelect.addEventListener("change", function () {
+        const target = this.value
+        if (target) window.location.href = target
+      })
+    }
+  </script>
+</body>
+</html>
